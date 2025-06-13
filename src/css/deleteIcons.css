@@ -1,0 +1,22 @@
+/* Скрываем иконку календаря во всех браузерах */
+input[type='date'].hide-date-icon {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+}
+
+/* Chrome, Safari, Edge */
+input[type='date'].hide-date-icon::-webkit-calendar-picker-indicator {
+    display: none !important;
+}
+
+/* Firefox */
+input[type='date'].hide-date-icon::-moz-calendar-picker-indicator {
+    display: none !important;
+}
+
+/* Убираем дополнительные стили Firefox */
+input[type='date'].hide-date-icon::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
